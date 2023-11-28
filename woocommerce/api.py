@@ -101,9 +101,9 @@ class API(object):
             **kwargs
         )
 
-    def get(self, endpoint, **kwargs):
+    def get(self, endpoint, data = None, **kwargs):
         """ Get requests """
-        return self.__request("GET", endpoint, None, **kwargs)
+        return self.__request("GET", endpoint, data, **kwargs)
 
     def post(self, endpoint, data, **kwargs):
         """ POST requests """
