@@ -100,8 +100,7 @@ class API(object):
             params=params,
             data=data,
             timeout=self.timeout,
-            headers=headers,
-            **kwargs
+            headers=headers
         )
 
     def get(self, endpoint, data = None, **kwargs):
