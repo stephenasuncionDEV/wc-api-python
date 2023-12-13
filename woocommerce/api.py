@@ -89,6 +89,9 @@ class API(object):
             data = jsonencode(data, ensure_ascii=False).encode('utf-8')
             headers["content-type"] = "application/json;charset=utf-8"
 
+        if (kwargs.get("headers")):
+            headers.update(kwargs.get("headers"))
+
         return request(
             method=method,
             url=url,
